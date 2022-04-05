@@ -1,0 +1,16 @@
+{% extends 'base.html' %} {% block content %}
+<div style="text-align: center;  margin: 20px;">
+    <h1>Add Forum Post</h1>
+    <h3>Respect Others, Respect the Forum</h3>
+    <form method="POST">
+        {% csrf_token%}
+        {{ form.media }}
+        {{ form.as_p}}
+        <input type="submit" class="btn btn-success" style="margin-bottom: 50px;">
+        <p>slug will be a part of the post's  url</p>
+        <p>Make Sure You have Changed Draft into Publish</p>
+        <p>Remember your chosen author name to verify the post belongs to you if you want to delete it in the future by contacting us</p>
+    </form>
+</div>
+
+{% endblock content %}
